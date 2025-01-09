@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>居家花卉搭配與銷售頁</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      display: none;
+    }
+    .container.active {
+      display: block;
+    }
+    .header {
+      text-align: center;
+      padding: 20px 0;
+    }
+    .header h1 {
+      font-size: 28px;
+      color: #2c3e50;
+    }
+    .header p {
+      font-size: 16px;
+      color: #7f8c8d;
+    }
+    .image {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .form-section, .cta {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .form-section input[type="email"] {
+      width: 80%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .form-section button, .cta button {
+      background-color: #27ae60;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .form-section button:hover, .cta button:hover {
+      background-color: #2ecc71;
+    }
+    .features {
+      margin: 20px 0;
+    }
+    .features h2 {
+      font-size: 22px;
+      color: #2c3e50;
+    }
+    .features ul {
+      list-style-type: disc;
+      margin-left: 20px;
+      color: #7f8c8d;
+    }
+    .features p {
+      font-size: 16px;
+      color: #7f8c8d;
+    }
+  </style>
+</head>
+<body>
+  <!-- 名單收集頁 -->
+  <div class="container active" id="lead-page">
+    <div class="header">
+      <h1>讓鮮花點亮您的家</h1>
+      <p>免費下載《居家花卉搭配指南》，立即獲取 10 種專業花卉搭配技巧！</p>
+    </div>
+    <div class="image">
+      <img src="https://via.placeholder.com/800x400" alt="居家花卉搭配">
+    </div>
+    <div class="form-section">
+      <p>輸入您的電子郵件以接收指南：</p>
+      <form id="lead-form">
+        <input type="email" name="email" placeholder="請輸入您的電子郵件" required>
+        <br>
+        <button type="submit">立即下載</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 銷售頁 -->
+  <div class="container" id="sales-page">
+    <div class="header">
+      <h1>專屬居家花卉搭配服務</h1>
+      <p>讓我們幫助您選擇最適合的鮮花搭配，為您的家增添溫暖和美感！</p>
+    </div>
+    <div class="image">
+      <img src="https://via.placeholder.com/800x400" alt="居家花卉服務">
+    </div>
+    <div class="features">
+      <h2>服務內容：</h2>
+      <ul>
+        <li>個性化花卉搭配設計</li>
+        <li>每月鮮花訂閱配送</li>
+        <li>專屬居家擺放建議</li>
+      </ul>
+      <h2>限時優惠：</h2>
+      <p>立即下單首單立減 $200，還可獲贈免費花卉護理套組！</p>
+    </div>
+    <div class="cta">
+      <button onclick="window.location.href='#'">立即訂購</button>
+    </div>
+  </div>
+
+  <script>
+    // 表單提交事件
+    document.getElementById('lead-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // 防止表單重新加載頁面
+      
+      // 隱藏名單收集頁，顯示銷售頁
+      document.getElementById('lead-page').classList.remove('active');
+      document.getElementById('sales-page').classList.add('active');
+      
+      // 模擬提示下載指南
+      alert('感謝您的訂閱！指南已發送至您的電子郵件。');
+    });
+  </script>
+</body>
+</html>
